@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sharipov"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Sharipov" Height="550" Width="1000" MinWidth="850" MinHeight="450" Icon="Resources\icon.ico" FontFamily="Comic Sans MS">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="75"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid  Background="#FFFFCC99">
+            <Image Source="Resources\logo.png" HorizontalAlignment="Left"></Image>
+            <TextBlock Text="41 размер" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26" ></TextBlock>
+            <Button Name="BackBtn" HorizontalAlignment="Right" VerticalAlignment="Center" Click="BackBtn_Click" Content="Назад" ></Button>
+        </Grid>
+        <Frame Name="MainFrame" Grid.Row="1" ContentRendered="MainFrame_ContentRendered" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Window>

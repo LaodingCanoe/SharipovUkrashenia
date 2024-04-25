@@ -1,0 +1,66 @@
+﻿<Page x:Class="Sharipov.NewProdPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Sharipov"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="NewProdPage" FontFamily="Comic Sans MS">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="auto" MinWidth="200"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="auto" MinWidth="200"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="Артикаль" FontSize="16" Margin="10"></TextBlock>
+        <TextBox  Grid.Column="1" Grid.Row="0" FontSize="16" Margin="10" Name="ProdArt"></TextBox>
+
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="Название продукта" FontSize="16" Margin="10" ></TextBlock>
+        <TextBox  Grid.Column="1" Grid.Row="1" FontSize="16" Margin="10" Name="ProdTitle"></TextBox>
+        <TextBlock Grid.Column="0" Grid.Row="2" Text="Еденица измерения" FontSize="16" Margin="10" ></TextBlock>
+        <TextBox  Grid.Column="1" Grid.Row="2" FontSize="16" Margin="10" Name="ProdUnit"></TextBox>
+        <TextBlock Grid.Column="0" Grid.Row="3" Text="Стоимость" FontSize="16" Margin="10" ></TextBlock>
+        <TextBox  Grid.Column="1" Grid.Row="3" FontSize="16" Margin="10" Name="ProdCost"></TextBox>
+        <TextBlock Grid.Column="0" Grid.Row="4" Text="Максимальная скидка" FontSize="16" Margin="10" ></TextBlock>
+        <TextBox  Grid.Column="1" Grid.Row="4" FontSize="16" Margin="10" Name="ProdDisMax"></TextBox>
+        <TextBlock Grid.Column="0" Grid.Row="5" Text="Производитель" FontSize="16" Margin="10" ></TextBlock>
+        <TextBox  Grid.Column="1" Grid.Row="5" FontSize="16" Margin="10" Name="ProdMan"></TextBox>
+        <TextBlock Grid.Column="2" Grid.Row="0" Text="Поставщик" FontSize="16" Margin="10" ></TextBlock>
+        <TextBox  Grid.Column="3" Grid.Row="0" FontSize="16" Margin="10" Name="ProdProvider"></TextBox>
+        <TextBlock Grid.Column="2" Grid.Row="1" Text="Категория товара" FontSize="16" Margin="10" ></TextBlock>
+        <TextBox  Grid.Column="3" Grid.Row="1" FontSize="16" Margin="10" Name="ProdCat"></TextBox>
+        <TextBlock Grid.Column="2" Grid.Row="2" Text="Действующая скидка" FontSize="16" Margin="10" ></TextBlock>
+        <TextBox  Grid.Column="3" Grid.Row="2" FontSize="16" Margin="10" Name="ProdDis"></TextBox>
+        <TextBlock Grid.Column="2" Grid.Row="3" Text="Кол-во на складе" FontSize="16" Margin="10" ></TextBlock>
+        <TextBox  Grid.Column="3" Grid.Row="3" FontSize="16" Margin="10" Name="ProdCount"></TextBox>
+        <TextBlock Grid.Column="2" Grid.Row="4" Text="Описание" FontSize="16" Margin="10" ></TextBlock>
+        <TextBox  Grid.Column="3" Grid.Row="4" FontSize="16" Margin="10" Name="ProdDeskription"></TextBox>
+        <StackPanel Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Orientation="Vertical" Margin="10">
+            <TextBlock Text="Логитип" FontSize="15" Height="20" Width="auto" Margin="5"></TextBlock>
+            <Image Name="LogoImage" Stretch="UniformToFill" MinHeight="50" Height="86" Width="87"
+                   HorizontalAlignment="Center" Margin="5">
+                <Image.Source>
+                    <Binding Path="Logo" TargetNullValue="resources\picture.png"></Binding>
+                </Image.Source>
+            </Image>
+        </StackPanel>
+        <Button Grid.Column="0" Grid.Row="8" Content="Изменить" Name="ChangePictureBtn" Click="ChangePictureBtn_Click"></Button>
+        <Button Grid.Row="8" Grid.Column="2" HorizontalAlignment="Center" Content="Удалить" VerticalAlignment="Top" Name="DelProd" Click="DelProd_Click" Visibility="Collapsed"></Button>
+        <Button Grid.Row="8" Grid.Column="3" HorizontalAlignment="Center" Content="Сохранить" VerticalAlignment="Top" Name="AddProd" Click="AddProd_Click"></Button>
+
+    </Grid>
+</Page>
